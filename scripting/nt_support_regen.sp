@@ -41,6 +41,11 @@ public void OnPluginStart()
     AutoExecConfig();
 }
 
+public void OnClientDisconnect(int client)
+{
+    g_fPlayerHealth[client] = 100.0;
+}
+
 public void OnGameFrame()
 {
     float regen = g_cvSupportRegen.FloatValue;
